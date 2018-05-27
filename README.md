@@ -11,14 +11,15 @@ This is the front-end fo the code challenging.
 6. Protractor
 
 ## Dependencies
-The Java Spring-boot back-end, source code: (https://github.com/yliu138/employee-hierarchy-coding-challenge)
+1. Node 8+ (As Angular Cli is used to generate the project, Node 8+ is a must-have for this project)
+2. The Java Spring-boot back-end, source code: (https://github.com/yliu138/employee-hierarchy-coding-challenge)
 
 ## Development server
 Run `npm start` to start the webpack server
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 
