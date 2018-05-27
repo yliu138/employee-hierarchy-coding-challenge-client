@@ -28,5 +28,11 @@ exports.config = {
   },
   onPrepare() {
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+
+    // To set up the mock configuration
+    require('protractor-http-mock').config = {
+      rootDirectory: __dirname, // default value: process.cwd()
+		  protractorConfig: 'protractor.conf.js' // default value: 'protractor-conf.js'
+    } ;   
   }
 };

@@ -32,8 +32,10 @@ Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.gi
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
+<strong>Notice that: because mock modules on an Angular v2+ app is not yet supported, the e2e test only relies upon the spring-boot rest api. Therefore, if you want to run the e2e test, please make sure the local backend is up and running</strong>
+
 ## Issues and resolution
-1. For protractor running by `npm run e2e`, if you encounter a issue of error code 135, you need to run `node_modules/<protractor-dir>/bin/webdriver-manager update`
+1. For protractor running by `npm run e2e`, if you encounter a issue of error code 135, you need to run `node_modules/<protractor-dir>/bin/webdriver-manager update` to install the selenium server locally
 
 ## Further help
 
