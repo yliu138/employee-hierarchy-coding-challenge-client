@@ -18,7 +18,5 @@ export class TreeViewComponent implements OnInit{
 
 	constructor() {}
 
-    ngOnInit():void {
-        console.log(this.directories, '===')
-    }
+    ngOnInit():void {}
 }

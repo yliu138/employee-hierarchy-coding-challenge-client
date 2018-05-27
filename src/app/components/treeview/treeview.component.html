@@ -12,11 +12,6 @@
         
         <div *ngIf="map[dirId].expanded" class="tree-children">
             <tree-view [directories]="map[dirId].subordinateList" [map]="map"></tree-view>
-            <ul>
-                <li *ngFor="let subordinateId of map[dirId].subordinateList" id="{{subordinateId}}">
-                    {{map[subordinateId].displayName()}}
-                </li>
-            </ul>
         </div>
     </li>
 </ul>
