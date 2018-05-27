@@ -4,7 +4,7 @@ This is the front-end fo the code challenging.
 
 ## Tools
 1. Webpack
-2. Karma
+2. Karma (Unit test)
 3. SASS
 4. Typescript
 5. Angular 2+
@@ -29,7 +29,7 @@ Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.gi
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
 <strong>Notice that: because mock modules on an Angular v2+ app is not yet supported, the e2e test only relies upon the spring-boot rest api. Therefore, if you want to run the e2e test, please make sure the local backend is up and running</strong>

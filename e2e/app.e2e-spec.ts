@@ -8,6 +8,7 @@ describe('employee-hierarchy-client App', () => {
   let page: EmployeeHierarchyClientPage;
 
   beforeEach(() => {
+    console.log('Please make sure the spring-boot server has been launched ===');
     page = new EmployeeHierarchyClientPage();
   });
 
