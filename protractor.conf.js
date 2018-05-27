@@ -13,7 +13,8 @@ exports.config = {
     'browserName': 'chrome'
   },
   directConnect: true,
-  baseUrl: 'http://localhost:4200/',
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  baseUrl: 'http://localhost:8081/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
