@@ -1,13 +1,20 @@
-# EmployeeHierarchyClient
+# Employee Hierarchy Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
+This is the front-end fo the code challenging.
+
+## Tools
+1. Webpack
+2. Karma
+3. SASS
+4. Typescript
+5. Angular 2+
+6. Protractor
+
+## Dependencies
+The Java Spring-boot back-end, source code: (https://github.com/yliu138/employee-hierarchy-coding-challenge)
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Run `npm start` to start the webpack server
 
 ## Build
 
