@@ -39,7 +39,6 @@ export class AppComponent implements OnInit {
     private employeefac: EmployeeFactory
   ) {
     this.title = 'Employee Hierarchy';
-    this.employeeService.getEmployeeMap(new EmployeeMapGetCallback(this.handleMapGet));
   }
 
   handleMapGet = (response: IResponseEmployeeMapGet): void => {
@@ -53,9 +52,9 @@ export class AppComponent implements OnInit {
     for (const id of ids) {
       this.employeeMap[id] = this.employeefac.createEmployee(this.employeeMap[id]);
     }
-    console.log(this.employeeMap)
   }
 
   ngOnInit(): void {
+    this.employeeService.getEmployeeMap(new EmployeeMapGetCallback(this.handleMapGet));
   }
 }
