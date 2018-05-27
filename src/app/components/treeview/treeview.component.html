@@ -5,7 +5,7 @@
         </span>
         
         <div class="node-wrapper">
-            <span class="node-title" id="{{map[dirId].employeeId}}">
+            <span class="node-title" id="{{map[dirId].employeeId}}" [ngClass]="map[dirId].getLevel()">
                 {{ map[dirId].displayName() }} ({{map[dirId].subordinateList.length}})
             </span>
         </div>

@@ -49,9 +49,26 @@
         width: 10px;
         left: -10px;
     }
-    .node-title, .node-delete {
+    .node-title {
         top: -8px;
         position: relative;
         left: 15px;
+
+        &.ceo {
+            color: $ceo-color;
+            font-weight: 700;
+            font-size: 1.3em;
+        }
+
+        &.normal-manager {
+            color: $general-manager;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        &.normal-leaf {
+            color: $general-leaf;
+            font-size: 1.1em;
+        }
     }
 }
