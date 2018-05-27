@@ -1,18 +1,17 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { Employee } from "../../models/Employee";
 
 @Component({
 	selector: 'tree-view',
     templateUrl: './treeview.component.html',
-    styleUrls: ['./treeview.component.scss'],
+    styleUrls: ['./treeview.component.scss']
 })
-
 export class TreeViewComponent implements OnInit{
 	@Input()
-    directories: Array < number >;
+    public directories: Array < number >;
     
     @Input()
-    map: {
+    public map: {
         [index: number]: Employee
     };
 
