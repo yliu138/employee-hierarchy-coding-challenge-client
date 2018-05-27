@@ -1,9 +1,11 @@
+import { ServiceHandler } from './services/service.handler';
+import { HttpClient } from './services/http.client';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './pages/app.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,10 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    HttpClient,
+    ServiceHandler
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
