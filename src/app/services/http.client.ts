@@ -22,7 +22,6 @@ export class HttpClient {
 
 	private setUrl(url: string, urlOpt: string): string {
         let myUrl: string;
-        console.log(AppConstant.api, '===')
 		if (urlOpt) {
 			myUrl = urlOpt;
 		} else {

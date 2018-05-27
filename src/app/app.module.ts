@@ -6,10 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './pages/app.component';
+import { TreeViewComponent } from './components/treeview/treeview.component';
+import { EmployeeFactory } from './services/employeeFactory';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TreeViewComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,8 @@ import { AppComponent } from './pages/app.component';
   ],
   providers: [
     HttpClient,
-    ServiceHandler
+    ServiceHandler,
+    EmployeeFactory
   ],
   bootstrap: [AppComponent]
 })

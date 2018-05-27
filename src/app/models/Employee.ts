@@ -36,6 +36,6 @@ export class Employee {
     }
 
     getLevel(): string {
-        return this.level;
+        return 'abstract';
     }
 }

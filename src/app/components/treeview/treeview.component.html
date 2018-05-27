@@ -1,0 +1,22 @@
+<ul class="treeview">
+    <li *ngFor="let dirId of directories">
+        <span *ngIf="map[dirId].subordinateList.length > 0" [ngClass]="map[dirId].expanded ? 'toggle-expanded' : 'toggle-collapsed'" (click)="map[dirId].toggle()" class="toggle" >
+            <span class="toggle-children"></span>
+        </span>
+        
+        <div class="node-wrapper">
+            <span class="node-title" id="{{map[dirId].employeeId}}">
+                {{ map[dirId].displayName() }} ({{map[dirId].subordinateList.length}})
+            </span>
+        </div>
+        
+        <div *ngIf="map[dirId].expanded" class="tree-children">
+            <tree-view [directories]="map[dirId].subordinateList" [map]="map"></tree-view>
+            <ul>
+                <li *ngFor="let subordinateId of map[dirId].subordinateList" id="{{subordinateId}}">
+                    {{map[subordinateId].displayName()}}
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>

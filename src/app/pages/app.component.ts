@@ -1,3 +1,5 @@
+import { EmployeeFactory } from './../services/employeeFactory';
+import { Employee } from './../models/Employee';
 import { Response } from '@angular/http';
 import { IResponseEmployeeMapGet } from './../interfaces/httpInterfaces/httpResponseModels';
 import { Callback } from './../interfaces/callback.interface';
@@ -27,16 +29,31 @@ class EmployeeMapGetCallback implements Callback<IResponseEmployeeMapGet, Respon
 })
 export class AppComponent implements OnInit {
   private title:string;
+  private ceoId: number;
+  private ceo: Employee;
+  private employeeMap: {[index: number]: Employee};
+  private directories: Array<number>;
 
   constructor(
-    private employeeService: EmployeeService
+    private employeeService: EmployeeService,
+    private employeefac: EmployeeFactory
   ) {
-    this.title = 'app works!';
+    this.title = 'Employee Hierarchy';
     this.employeeService.getEmployeeMap(new EmployeeMapGetCallback(this.handleMapGet));
   }
 
   handleMapGet = (response: IResponseEmployeeMapGet): void => {
-    console.log(response, '===')
+    this.ceoId = response.ceoId;
+    this.directories = [this.ceoId];
+    this.employeeMap = response.map;
+    this.ceo = this.employeeMap[this.ceoId];
+
+    // Construct the employee types so that they could be used for the tree view
+    const ids = Object.keys(this.employeeMap);
+    for (const id of ids) {
+      this.employeeMap[id] = this.employeefac.createEmployee(this.employeeMap[id]);
+    }
+    console.log(this.employeeMap)
   }
 
   ngOnInit(): void {
